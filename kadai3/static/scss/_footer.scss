@@ -1,0 +1,180 @@
+//main:style.scss
+
+/*=================
+
+      footer.scss
+
+=======================*/
+
+footer{
+  -webkit-box-shadow: 0 -4px 8px rgba(76, 76, 76, 0.1);
+          box-shadow: 0 -4px 8px rgba(76, 76, 76, 0.1);
+  background-color: $base-color;
+}
+
+.footer_content{
+  padding: 72px 0 64px;
+  @media #{$size640}{
+    padding: 40px 0 40px;
+  }
+  .footer_content_detail_block{
+    margin: 0 0 88px;
+    @media #{$size640}{
+      margin: 0 0 50px;
+    }
+    .footer_logo{
+      display: block;
+      width: 110px;
+      margin: 0 0 24px;
+      @media #{$size640}{
+        margin: 0 0 16px;
+      }
+      img{
+        display: block;
+        width: 100%;
+      }
+    }
+    .footer_text{
+      max-width: 784px;
+      margin: 0 auto 0 0;
+      @include fg_m;
+      font-size: 16px;
+      color: $font-color;
+      line-height: 1.5;
+      @media #{$size640}{
+        font-size: 14px;
+      }
+    }
+  }
+  .footer_column_menu{
+    .footer_column_menu_title{
+      @include fg_b;
+      font-size: 16px;
+      color: $font-color;
+      line-height: 1.5;
+      margin: 0 0 48px;
+    }
+    .footer_column_menu_list{
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+      width: 100%;
+      margin: 0 0 -48px;
+      @media #{$size640}{
+        margin: 0 0 0;
+      }
+      .footer_column_menu_item{
+        width: calc((100% - 144px) /4);
+        margin: 0 48px 48px 0;
+        @media #{$size960}{
+          width: calc((100% - 48px) /2);
+        }
+        @media #{$size640}{
+          width: 100%;
+          margin: 0 0 30px 0;
+        }
+        &:nth-of-type(4n){
+          margin: 0 0 48px 0;
+          @media #{$size640}{
+            margin: 0 0 30px 0;
+          }
+        }
+        &:nth-of-type(2n){
+          @media #{$size960}{
+            margin: 0 0 48px 0;
+          }
+          @media #{$size640}{
+            margin: 0 0 30px 0;
+          }
+        }
+        &:last-child{
+          @media #{$size640}{
+            margin: 0 0 0 0;
+          }
+        }
+        .footer_column_menu_item_large_category{
+          display: block;
+          padding: 0 0 32px;
+          margin: 0 0 32px;
+          border-bottom: 1px dashed $font-color;
+          @include fg_b;
+          font-size: 14px;
+          color: $font-color;
+          line-height: 1.5;
+          @media #{$size640}{
+            padding: 0 0 16px;
+            margin: 0 0 16px;
+          }
+        }
+        .footer_column_category_menu_list{
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex;
+          -ms-flex-wrap: wrap;
+              flex-wrap: wrap;
+          width: 100%;
+          margin: 0 0 -32px;
+          .footer_column_category_menu_item{
+            margin: 0 24px 32px 0;
+            .footer_column_category_menu_link{
+              display: block;
+              @include fg_m;
+              font-size: 14px;
+              color: $font-color;
+              line-height: 1.5;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.footer_menu_block{
+  padding: 48px 0;
+  border-top: 1px solid $border-color;
+  border-bottom: 1px solid $border-color;
+  @media #{$size640}{
+    padding: 40px 0;
+  }
+  .footer_menu_list{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    margin: 0 0 -20px;
+    .footer_menu_item{
+      margin: 0 80px 20px 0;
+      @media #{$size640}{
+        margin: 0 20px 20px 0;
+      }
+      .footer_menu_link{
+        display: block;
+        @include fg_b;
+        font-size: 16px;
+        color: $font-color;
+        line-height: 1.5;
+        @media #{$size640}{
+          font-size: 14px;
+        }
+      }
+    }
+  }
+}
+
+.footer_copy{
+  padding: 20px 0;
+  @media #{$size640}{
+    padding: 10px 0;
+  }
+  .footer_copy_text{
+    text-align: center;
+    @include fg_b;
+    font-size: 12px;
+    color: $font-color;
+    line-height: 1.5;
+  }
+}

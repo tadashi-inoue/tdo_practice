@@ -1,0 +1,147 @@
+* {
+  padding:0px;
+  margin:0px;
+  text-decoration:none;
+  list-style:none;
+  box-sizing:border-box;
+}
+
+/* formリセット */
+input,
+button,
+select,
+textarea {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background: transparent;
+  border: none;
+  border-radius: 0;
+  font: inherit;
+  outline: none;
+}
+
+textarea {
+  resize: vertical;
+}
+
+input[type='checkbox'],
+input[type='radio'] {
+  display: none;
+}
+
+input[type='submit'],
+input[type='button'],
+label,
+button,
+select {
+  cursor: pointer;
+}
+
+select::-ms-expand {
+  display: none;
+}
+/* formリセット */
+
+.mr16px {
+  margin-right:16px;
+}
+
+body {
+  background-color:#F2F3F3;
+}
+
+h3 {
+  color:#282828;
+  font-size:24px;
+  margin-bottom:24px;
+}
+
+strong {
+  background-color:#F53246;
+  padding:1px 4px;
+  color:#fff;
+  border-radius:4px;
+  font-size:12px;
+  height:20px;
+}
+
+#wrapper {
+  background-color:#fff;
+  padding:40px;
+  margin:80px;
+  border-radius:40px;
+  box-shadow:0px 8px 24px 4px rgba(100, 100, 100, 0.1);
+  max-width:560px;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+
+.form_content {
+  margin:0px 0px 32px 0px;
+}
+
+.form_content_name {
+  display:flex;
+  flex-wrap:nowrap;
+}
+
+.form_title_group {
+  display:flex;
+  align-items:center;
+  margin-bottom:8px;
+}
+
+.form_title {
+  font-size:16px;
+  font-weight:bold;
+  color:#282828;
+  margin:0px 8px 0px 0px;
+}
+
+.textarea {
+  color:#282828;
+  font-size:16px;
+  height:48px;
+  width:320px;
+  padding:0px 0px 0px 8px;
+  border:1px solid rgba(200, 200 ,200);
+  border-radius:4px;
+}
+
+.textarea:focus {
+  border:1px solid #28C86E;
+}
+
+.textarea_halfsize {
+  color:282828;
+  font-size:16px;
+  height:48px;
+  width:152px;
+  padding:0px 0px 0px 8px;
+  border:1px solid rgba(200, 200 ,200);
+  border-radius:4px;
+}
+
+.textarea_halfsize:focus {
+  border:1px solid #28C86E;
+}
+
+.form_btn {
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+
+.btn {
+  color:#fff;
+  font-size:18px;
+  font-weight:bold;
+  background-color:#008482;
+  height:56px;
+  width:200px;
+  border-radius:8px;
+  margin:16px 0px 16px 0px;
+}
+

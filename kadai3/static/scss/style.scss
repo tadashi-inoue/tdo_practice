@@ -1,0 +1,235 @@
+// compileExpanded: ../css/$1.css
+
+@charset 'utf-8';
+
+
+/* ======================= VARIABLE ====== */
+
+$get_img: "../images/";
+$size340:  "only screen and (max-width:340px)";
+$size500:  "only screen and (max-width:500px)";
+$size640:  "only screen and (max-width:640px)";
+$size750:  "only screen and (max-width:750px)";
+$size840: "only screen and (max-width:840px)";
+$size960:  "only screen and (max-width:960px)";
+$size999:  "only screen and (max-width:999px)";
+$size1000:  "only screen and (max-width:1000px)";
+$size1024:  "only screen and (max-width:1024px)";
+$size1100:  "only screen and (max-width:1100px)";
+$size1200:  "only screen and (max-width:1200px)";
+$size1300:  "only screen and (max-width:1300px)";
+$size1400:  "only screen and (max-width:1400px)";
+$sp_none960:  "only screen and (min-width:960px)";
+
+$main-color:#229C9A;
+$sub-color:#F5873C;
+$base-color:#FFF;
+$font-color:#000;
+$l_font-color:#282828;
+$sub-font-color:#6C6C6C;
+$l_gray:#F9F9FA;
+$border-color:#BEBEBE;
+$bg-main-color:#D4F1F1;
+$bg-color:#EFF2F5;
+$error:#FB3C3C;
+$submit-color:#FD7764;
+$category01:#F5873C;
+$category02:#0EB784;
+$category03:#2B8EC9;
+
+
+/* ======================= IMPORT ====== */
+
+@import "_mixin.scss";
+@import "_common.scss";
+@import "_header.scss";
+@import "_footer.scss";
+@import "_top.scss";
+@import "_policy.scss";
+@import "_column.scss";
+@import "_contact.scss";
+@import "_about.scss";
+
+
+/* ======================= BASE ====== */
+
+*{
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html,body{
+	margin: 0;
+  height: 100%;
+}
+
+.clearfix:after {
+  content: "";
+  clear: both;
+  display: block;
+}
+
+.mb_0{
+  margin-bottom: 0;
+}
+
+.mb_10{
+  margin-bottom: 10px;
+}
+
+.mb_20{
+  margin-bottom: 20px;
+}
+
+.mb_30{
+  margin-bottom: 30px;
+}
+
+.mb_50{
+  margin-bottom: 50px;
+}
+
+.mt_0{
+  margin-top: 0;
+}
+
+.mt_10{
+  margin-top: 10px;
+}
+
+.mt_20{
+  margin-top: 20px;
+}
+
+.mt_30{
+  margin-top: 30px;
+}
+
+.mt_40{
+  margin-top: 40px;
+}
+
+.mt_50{
+  margin-top: 50px;
+}
+
+.mt_80{
+  margin-top: 80px;
+}
+
+.mr_5{
+  margin-right: 5px;
+}
+
+.mr_20{
+  margin-right: 20px;
+}
+
+.sp_mb_10{
+  @media #{$size999}{
+   margin-bottom: 10px;
+  }
+}
+
+
+.common_pc{
+  display: block;
+  @media #{$size960}{
+    display: none;
+  }
+}
+
+.common_sp{
+  display: none;
+  @media #{$size960}{
+    display: block;
+  }
+}
+
+.common_pc840{
+  @media #{$size840}{
+    display: none;
+  }
+}
+
+.common_sp840{
+  display: none;
+  @media #{$size840}{
+    display: block;
+  }
+}
+
+.common_pc640{
+  display: block;
+  &.height_100{
+	  height: 100%;
+  }
+  @media #{$size640}{
+    display: none;
+  }
+}
+
+.common_sp640{
+  display: none;
+  @media #{$size640}{
+    display: block;
+  }
+}
+
+.mb_0{
+  margin-bottom: 0;
+}
+
+
+body{
+  background-color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  min-height: 100vh;
+}
+
+footer{
+  margin-top:auto;
+}
+
+body ul{
+  list-style: none;
+}
+
+body a{
+  text-decoration: none;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+
+@media #{$sp_none960}{
+  body a:hover{
+    opacity: 0.7;
+  }
+}
+
+
+button{
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  padding: 0;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+}
+
+
+/* ======================= FONT ====== */
+
+
+.fg{
+  font-family: Hiragino Sans,"ヒラギノ角ゴシック",Hiragino Kaku Gothic ProN,"ヒラギノ角ゴ ProN W3","Droid Sans",YuGothic,"游ゴシック",Meiryo,"メイリオ","ＭＳ Ｐゴシック",sans-serif;
+}

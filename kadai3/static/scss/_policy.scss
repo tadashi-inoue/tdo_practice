@@ -1,0 +1,75 @@
+//main:style.scss
+
+
+/*=================
+
+      policy.scss
+
+=======================*/
+
+.terms_page{
+  background-color: $l_gray;
+  padding: 72px 0 188px;
+  @media #{$size640}{
+    padding: 40px 0 50px;
+  }
+}
+
+.privacy_page{
+  background-color: $l_gray;
+  padding: 72px 0 188px;
+  @media #{$size640}{
+    padding: 40px 0 50px;
+  }
+}
+
+.policy_block_wrap{
+  margin: 0 0 50px;
+  @media #{$size640}{
+    margin: 0 0 40px;
+  }
+  .policy_block{
+    margin: 0 0 40px;
+    @media #{$size640}{
+      margin: 0 0 30px;
+    }
+    &:last-child{
+      margin: 0 0 0;
+    }
+    .policy_block_title{
+      @include fg_b;
+      font-size: 24px;
+      color: $font-color;
+      line-height: 1.5;
+      margin: 0 0 20px;
+      @media #{$size640}{
+        font-size: 20px;
+      }
+    }
+    .policy_text{
+      @include fg_r;
+      font-size: 14px;
+      color: $font-color;
+      line-height: 1.75;
+    }
+    .policy_list{
+      padding: 0 0 0 20px;
+      list-style: decimal;
+      .policy_item{
+        @include fg_r;
+        font-size: 14px;
+        color: $font-color;
+        line-height: 1.75;
+        margin: 0 0 10px;
+      }
+    }
+  }
+}
+
+.policy_date{
+  text-align: right;
+  @include fg_r;
+  font-size: 14px;
+  color: $font-color;
+  line-height: 1.5;
+}

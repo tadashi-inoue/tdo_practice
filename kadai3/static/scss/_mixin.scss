@@ -1,0 +1,23 @@
+//main:style.scss
+
+/*=================
+
+      mixin.scss
+
+=======================*/
+
+
+@mixin fg_r{
+  font-family: Hiragino Sans,"ヒラギノ角ゴシック",Hiragino Kaku Gothic ProN,"ヒラギノ角ゴ ProN W3","Droid Sans",YuGothic,"游ゴシック",Meiryo,"メイリオ","ＭＳ Ｐゴシック",sans-serif;
+  font-weight: 400;
+}
+
+@mixin fg_m{
+  font-family: Hiragino Sans,"ヒラギノ角ゴシック",Hiragino Kaku Gothic ProN,"ヒラギノ角ゴ ProN W3","Droid Sans",YuGothic,"游ゴシック",Meiryo,"メイリオ","ＭＳ Ｐゴシック",sans-serif;
+  font-weight: 500;
+}
+
+@mixin fg_b{
+  font-family: Hiragino Sans,"ヒラギノ角ゴシック",Hiragino Kaku Gothic ProN,"ヒラギノ角ゴ ProN W3","Droid Sans",YuGothic,"游ゴシック",Meiryo,"メイリオ","ＭＳ Ｐゴシック",sans-serif;
+  font-weight: 600;
+}

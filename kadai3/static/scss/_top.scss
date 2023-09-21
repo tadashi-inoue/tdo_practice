@@ -1,0 +1,310 @@
+//main:style.scss
+
+
+/*=================
+
+      top.scss
+
+=======================*/
+
+/*fv*/
+
+.fv{
+  background-image: url(../images/top/bg_fv.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center bottom;
+  width: 100%;
+  padding: 66px 0 32px;
+  @media #{$size640}{
+    background-image: url(../images/top/bg_fv_sp.svg);
+    padding: 30px 0 30px;
+  }
+}
+
+.fv_content{
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  @media #{$size640}{
+    display: block;
+  }
+  .fv_content_detail{
+    width: calc(100% - 340px);
+    @media #{$size840}{
+      width: calc(100% - 260px);
+    }
+    @media #{$size640}{
+      width: 100%;
+      margin: 0 0 30px;
+    }
+    .fv_sub_text_wrap{
+      position: relative;
+      display: inline-block;
+      padding: 16px 24px;
+      @include fg_b;
+      color: $font-color;
+      font-size: 18px;
+      background-color: $bg-main-color;
+      border-radius: 30px;
+      margin: 0 0 40px;
+      @media #{$size640}{
+        font-size: 16px;
+        margin: 0 0 30px;
+      }
+      &::before{
+        content: "";
+        position: absolute;
+        top: 100%;
+        left: 50px;
+        margin-left: -15px;
+        border: 10px solid transparent;
+        border-top: 10px solid $bg-main-color;
+      }
+      .fv_sub_text{
+        margin: 0;
+        padding: 0;
+      }
+    }
+    .fv_title{
+      @include fg_b;
+      color: $font-color;
+      font-size: 36px;
+      line-height: 1.5;
+      margin: 0 0 64px;
+      @media #{$size840}{
+        font-size: 32px;
+      }
+      @media #{$size640}{
+        font-size: 28px;
+        margin: 0 0 40px;
+      }
+      .flex{
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+      }
+      .border{
+        @include fg_b;
+        font-size: 64px;
+        line-height: 1.5;
+        letter-spacing: 0.01em;
+        text-shadow:2px 2px 0 $l_font-color, -2px -2px 0 $l_font-color,
+              -2px 2px 0 $l_font-color, 2px -2px 0 $l_font-color,
+              0px 2px 0 $l_font-color,  0 -2px 0 $l_font-color,
+              -2px 0 0 $l_font-color, 2px 0 0 $l_font-color;
+        @media #{$size840}{
+          font-size: 50px;
+        }
+        @media #{$size640}{
+          font-size: 42px;
+        }
+      }
+      .orange{
+        color: #FDE7D8;
+      }
+      .green{
+        color: #CFF1E6;
+      }
+      .blue{
+        color: #CCE4F2
+      }
+      .t_green{
+        @include fg_b;
+        font-size: 48px;
+        color: $main-color;
+        line-height: 1.5;
+        letter-spacing: 0.01em;
+        margin: 0 24px;
+        @media #{$size640}{
+          font-size: 30px;
+          margin: 0 10px;
+        }
+      }
+      .dot{
+        position: relative;
+        &::after{
+          content: "";
+          position: absolute;
+          top: -22px;
+          left: 50%;
+          -webkit-transform: translateX(-50%);
+                  transform: translateX(-50%);
+          width: 12px;
+          height: 12px;
+          background-color: $main-color;
+          border-radius: 50%;
+        }
+      }
+      .wave_border{
+        position: relative;
+        &:after{
+          content: "";
+          position: absolute;
+          bottom: -20px;
+          left: 0;
+          width: 100%;
+          height: 10px;
+          background-image: url(../images/top/img_wavy_line.png);
+          background-repeat: repeat-x;
+          background-size: contain;
+
+        }
+
+      }
+    }
+    .fv_search_btn{
+      width: 100%;
+      max-width: 400px;
+      margin: 0 auto 0 0;
+      height: 72px;
+      border-radius: 40px;
+      border: 3px solid #BEBEBE;
+      background-color: $base-color;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center;
+      -webkit-box-shadow: 0 0 4px rgba(76, 76, 76, 0.04);
+              box-shadow: 0 0 4px rgba(76, 76, 76, 0.04);
+      @include fg_b;
+      font-size: 24px;
+      color: $font-color;
+      line-height: 1.5;
+      @media #{$size640}{
+        font-size: 20px;
+      }
+      img{
+        width: 40px;
+        margin: 0 0 0 8px;
+        @media #{$size640}{
+          width: 30px;
+        }
+      }
+    }
+  }
+  .fv_content_img{
+    width: 242px;
+    margin: 34px 58px 0 40px;
+    @media #{$size840}{
+      width: 200px;
+      margin: 34px 20px 0 40px;
+    }
+    @media #{$size640}{
+      width: 160px;
+      margin: 0 auto 0 auto;
+    }
+    img{
+      width: 100%;
+    }
+  }
+}
+
+/*top_search*/
+
+.top_search{
+  margin: 0 0 96px;
+  @media #{$size640}{
+    margin: 0 0 50px;
+  }
+}
+
+/*top_pickup_column*/
+
+.top_pickup_column{
+  margin: 0 0 96px;
+  @media #{$size640}{
+    margin: 0 0 50px;
+  }
+}
+
+/*top_particulars*/
+
+.top_particulars{
+  margin: 0 0 96px;
+  @media #{$size640}{
+    margin: 0 0 50px;
+  }
+}
+
+.top_particulars_chat_block_wrap{
+  .top_particulars_chat_block{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    width: 100%;
+    margin: 0 0 24px;
+    &:last-child{
+      margin: 0 0 0;
+    }
+    &.left{
+      .top_particulars_chat_left_icon{
+        width: 50px;
+        margin: 0 16px 0 0;
+        img{
+          width: 100%;
+        }
+      }
+      .top_particulars_chat_left_text{
+        width: calc(100% - 66px);
+        background-color: #EBEBEB;
+        border-radius: 0 9px 9px 9px;
+        padding: 16px 24px;
+        -webkit-box-shadow: 0 0 6px rgba(76, 76, 76, 0.04);
+                box-shadow: 0 0 6px rgba(76, 76, 76, 0.04);
+        @include fg_m;
+        font-size: 14px;
+        color: $l_font-color;
+        line-height: 1.5;
+        @media #{$size640}{
+          padding: 16px 16px;
+          font-size: 13px;
+        }
+        a{
+          color: #2868FF;
+        }
+      }
+    }
+    &.right{
+      .top_particulars_chat_right_text{
+        width: calc(100% - 66px);
+        background-color: #D4F1F1;
+        border-radius: 9px 0 9px 9px;
+        padding: 16px 24px;
+        -webkit-box-shadow: 0 0 6px rgba(76, 76, 76, 0.04);
+                box-shadow: 0 0 6px rgba(76, 76, 76, 0.04);
+        @include fg_m;
+        font-size: 14px;
+        color: $l_font-color;
+        line-height: 1.5;
+        @media #{$size640}{
+          padding: 16px 16px;
+          font-size: 13px;
+        }
+        a{
+          color: #2868FF;
+        }
+      }
+      .top_particulars_chat_right_icon{
+        width: 50px;
+        margin: 0 0 0 16px;
+        img{
+          width: 100%;
+        }
+      }
+    }
+  }
+}
