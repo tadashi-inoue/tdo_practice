@@ -1,20 +1,19 @@
 <?php
 
+function get_member_list(int $page) : array {
+  $start  = ($page - 1) * 5 + 1; 
+  $end    = $page * 5;
+  $param = get_all_members();
 
-function get_member_list($page , $member){
-
-  $start = ($page - 1)*5 + 1; 
-  $end   = $start*5;
-  $parama = get_all_members
-
-  count = 0;
-  foreach($member as $key => $val){
-    if()
+  $count = 0;
+  foreach ($param as $key => $val) {
+    if ($key >= $start and $count < 5) {
+      $count++;
+      $ret[$key]['name'] = $val['name'];
+      $ret[$key]['mail'] = $val['mail'];
+    }
   }
-    if($param == 1){
-    foreach($member['name'] as $key => $val){:      }
-
-  }
+  return $ret;
 }
 
 function get_all_members() {

@@ -1,27 +1,21 @@
 <?php
-  $session_start();
+  
+  require_once('function.php');
 
-  $page = $_GET['page'];
+  session_start();
 
   $page = 1;
-  //if($page = $_SESSION['page'];){}
-
-
-
-  function get_member_list($page , $member){
-
-    $start = ($page - 1)*5 + 1; 
-    $end   = $start*1 + 5;
-
-    count = 0;
-    foreach($member as $key => $val){
-      if()
-    }
-    if($param == 1){
-      foreach($member['name'] as $key => $val){:      }
-
-    }
+  if (!empty($_SESSION['page'])) {
+    $page = $_SESSION['page'];
   }
+
+  if (!empty($_GET['page']) and is_numeric($_GET['page'])) {
+    $page = $_GET['page'];
+  }
+
+  $ret = get_member_list($page);
+  $_SESSION['page'] = $page;
+
 ?>
 
 <!DOCTYPE HTML>
@@ -32,18 +26,9 @@
     <title>Member List</title>
   </head>
   <body>
-
-<?php
-    foreach($member['name'] as $key => $val){
-      echo $key + 1;
-      echo $val;
-}
-?>
-<?php
-    foreach($member['mail'] as $key => $val){
-      echo $key + 1;
-      echo $val;
-}
-?>
+  <?php foreach ($ret as $key => $val): ?>
+    <p><?= $val ?></p>
+    <p><?= $val['mail'] ?></p>
+  <?php endforeach; ?> 
   </body>
 </html>
